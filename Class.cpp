@@ -19,13 +19,12 @@ vector <vector <double>> matricesMultiplication(vector <vector <double>> m1,vect
 				{	
 					result[i][j]+=m1[i][k]*m2[k][j];	
 				}
-				//cout<<result[i][j]<<" ";
 			}
-			//cout<<endl;
+			
 		}
 		return result;
 	}
-	//vector <vector <double>> result();
+	
 }
 
 
@@ -40,18 +39,15 @@ vector <vector <double>> matrixRotation(int dimension,vector <double> angles)
 			for(int k=0;k<dimension;k++)
 				{	
 					if(j==k){
-						result[j][k]=1;
-								
+						result[j][k]=1;			
 					}
-					//cout<<result[j][k]<<" ";
 				}
-				//cout<<endl;
 			}
 	for(int i=0;i<dimension;i++)
 		{
 		for(int l=i+1;l<dimension;l++)
 			{
-			//cout<<i<<" "<<l<<" "<<endl;
+			
 			for(int j=0;j<dimension;j++)
 				{
 				for(int k=0;k<dimension;k++)
@@ -71,60 +67,12 @@ vector <vector <double>> matrixRotation(int dimension,vector <double> angles)
 						}
 					}
 				}
-				//cout<<p<<endl;
+				
 				p++;
 				result=matricesMultiplication(result,data);
-			/*	for(int j=0;j<dimension;j++)
-				{
-					for(int k=0;k<dimension;k++)
-					{	
-						//cout<<data[j][k]<<" ";
-						cout<<result[j][k]<<" ";
-								
-					}
-					cout<<endl;
-					//cout<<result[j][k]<<" ";
-				}
-				//cout<<endl;
-			*/
+			
 				data.resize(dimension,vector <double>(dimension,0));
 			}
 		}
 	return result;
-}
-
-
-
-int main() {
-	
-	int n=3;
-	vector <vector <double>> arr2={
-		{1,0,0,0}
-	};
-	vector <double> angles={0,0,0};
-	vector <vector <double>> arr1=matrixRotation(n,angles);
-	for(int j=0;j<n;j++)
-	{
-		for(int k=0;k<n;k++)
-		{	
-				cout<<arr1[j][k]<<" ";			
-		}
-		cout<<endl;
-	}
-	
-	//matricesMultiplication(matricesMultiplication2(arr2,arr1),arr1);
-	/*Matrix matrix1(4,4);
-	Matrix matrix2(1,4);
-	//Matrix matrix3(1,4);
-	matrix1.inputMatrix(arr1);
-	matrix2.inputMatrix(arr2);
-	matrix1.print();
-	cout<<endl;
-	matrix2.print();
-	cout<<endl;
-	matricesMultiplication(matrix2,matrix1);*/
-//	matricesMultiplication(matrix1,matricesMultiplication(matrix1,matrix2));
-
-	
-    return 0;
 }
