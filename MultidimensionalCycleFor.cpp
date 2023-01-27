@@ -46,12 +46,12 @@ int main(int argc, char** argv) {
     initial_index={-1,-1,-1};
     final_index={2,2,2},increment={1,1,1};
     for_md(int,index,initial_index,final_index,increment)
-    // the initial value of the variable "index"
+    // "initial_index" is the initial value of the variable "index"
     //this cycle is working while index[0]<final_index[0] and index[1]<final_index[1] and index[2]<final_index[2]
     //  index[i] changes in increments of increment[i]
     {
         cout<<index[0]<<" "<<index[1]<<" "<<index[2]<<endl;
-	  }
+    }
     /*
         equivalent
         for(vector<int>i=starti;exit_condition(i,condition);i=index_increment(i,condition,increment,starti))
