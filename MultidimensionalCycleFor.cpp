@@ -2,7 +2,7 @@
 #include <vector>
 
 
-#define for_md(type,name_index,initial_index,final_index,increment) for(vector<type> name_index = initial_index;exit_condition(name_index,final_index);name_index=index_incremen(name_index,initial_index,final_index,increment))
+#define for_md(type,name_index,initial_index,final_index,increment) for(vector<type> name_index = initial_index;exit_condition(name_index,final_index);name_index=index_increment(name_index,initial_index,final_index,increment))
 
 using namespace std;
 
@@ -21,7 +21,7 @@ bool exit_condition(vector<int>i,vector<int>condition)
         }
     }
 }
-vector<int> index_incremen(vector<int>i,vector<int>initial_index,vector<int>final_index,vector<int> increment)
+vector<int> index_increment(vector<int>i,vector<int>initial_index,vector<int>final_index,vector<int> increment)
 {
     vector<int> result=i;
     int last=i.size()-1;
@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
 	  }
     /*
         equivalent
-        for(vector<int>i=starti;exit_condition(i,condition);i=index_incremen(i,condition,increment,starti))
+        for(vector<int>i=starti;exit_condition(i,condition);i=index_increment(i,condition,increment,starti))
         {
             cout<<i[0]<<" "<<i[1]<<" "<<i[2]<<endl;
         }
